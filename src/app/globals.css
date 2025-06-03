@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-inter: 'Inter', sans-serif;
+    --font-poppins: 'Poppins', sans-serif;
+    --font-playfair: 'Playfair Display', serif;
+    --font-great-vibes: 'Great Vibes', cursive;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-neutral-dark antialiased;
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: var(--font-great-vibes), var(--font-playfair);
+  }
+
+  .font-heading {
+    font-family: var(--font-poppins);
+  }
+
+  .font-body {
+    font-family: var(--font-inter);
+  }
+}
