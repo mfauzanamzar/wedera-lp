@@ -1,36 +1,111 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Wedera - Undangan Pernikahan Digital
 
-## Getting Started
+Wedera adalah platform undangan pernikahan digital yang elegan dan personal. Dibangun dengan Next.js dan Tailwind CSS, Wedera menawarkan pengalaman yang memukau untuk pasangan yang ingin membuat undangan pernikahan digital mereka.
 
-First, run the development server:
+## 🚀 Fitur
 
+- **Desain Elegan**: Berbagai template undangan yang elegan dan modern
+- **Responsif**: Tampilan yang sempurna di semua perangkat
+- **Animasi**: Efek scroll yang halus menggunakan AOS
+- **Optimasi SEO**: Dibangun dengan Next.js untuk performa dan SEO yang optimal
+- **Integrasi WordPress**: Menggunakan WordPress sebagai headless CMS
+
+## 🛠️ Teknologi
+
+- [Next.js 14](https://nextjs.org/) - React Framework
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS Framework
+- [AOS](https://michalsnik.github.io/aos/) - Animate On Scroll Library
+- [Lucide Icons](https://lucide.dev/) - Icon Library
+- [WordPress REST API](https://developer.wordpress.org/rest-api/) - Headless CMS
+
+## 📦 Instalasi
+
+1. Clone repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/yourusername/wedera-lp.git
+cd wedera-lp
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Buat file `.env` di root project
+```env
+NEXT_PUBLIC_SITE_URL=
+NEXT_PUBLIC_API_URL=
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Jalankan development server
+```bash
+npm run dev
+```
 
-## Learn More
+## 🏗️ Struktur Project
 
-To learn more about Next.js, take a look at the following resources:
+```
+wedera-lp/
+├── src/
+│   ├── app/                 # App router
+│   │   ├── page.tsx        # Home page
+│   │   ├── template.tsx    # Template page
+│   │   └── api.ts          # API routes
+│   ├── components/          # React components
+│   │   ├── Hero.tsx        # Hero section
+│   │   ├── Features.tsx    # Features section
+│   │   ├── Catalog.tsx     # Template catalog
+│   │   ├── Pricing.tsx     # Pricing plans
+│   │   ├── FAQ.tsx         # FAQ section
+│   │   ├── CTA.tsx         # Call to action
+│   │   ├── Contact.tsx     # Contact section
+│   │   ├── Footer.tsx      # Footer
+│   │   └── AOSInit.tsx     # AOS initialization
+│   └── styles/             # Global styles
+├── public/                 # Static files
+├── .env.example           # Example environment variables
+├── next.config.js         # Next.js configuration
+└── package.json           # Project dependencies
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎨 Komponen
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Hero Section
+- Tampilan utama dengan headline dan CTA
+- Animasi fade-up pada scroll
+- Gambar hero yang responsif
 
-## Deploy on Vercel
+### Features Section
+- Grid fitur dengan ikon
+- Animasi fade-up pada setiap card
+- Desain yang clean dan modern
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Catalog Section
+- Grid template undangan
+- Filter berdasarkan kategori
+- Integrasi dengan WordPress API
+- Loading state yang elegan
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Pricing Section
+- Tiga paket harga
+- Highlight paket populer
+- Fitur list yang detail
+- CTA untuk setiap paket
+
+### FAQ Section
+- Accordion style
+- Animasi smooth
+- Pertanyaan umum yang informatif
+
+### CTA Section
+- Background gradient
+- CTA yang menonjol
+- Animasi fade-up
+
+### Contact Section
+- Kontak WhatsApp dan Email
+- Ikon yang interaktif
+- Layout yang responsif
+
+## 📝 Lisensi
+
+© 2025 Wedera. All rights reserved.
