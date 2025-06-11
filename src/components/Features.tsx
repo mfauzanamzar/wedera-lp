@@ -1,16 +1,16 @@
 'use client';
 
 import {
-    Paintbrush, Image as Photo, Heart,
-    Sparkles, Clock, Share2, Music,
-    Calendar, MapPin, Gift, Users,
-    CheckCircle
+  Paintbrush, Image as Photo, Heart,
+  Sparkles, Clock, Share2, Music,
+  Calendar, MapPin, Gift, Users,
+  CheckCircle
 } from 'lucide-react';
 
 const features = [
   {
     icon: Paintbrush,
-    title: 'Desain Custom',
+    title: 'Tema Premium',
     description: 'Pilih dari berbagai tema elegan atau custom sesuai keinginan'
   },
   {

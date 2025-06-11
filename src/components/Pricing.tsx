@@ -3,45 +3,34 @@ import Link from 'next/link';
 
 const plans = [
   {
-    name: 'Basic',
-    price: '299K',
+    name: 'Non Foto',
+    originalPrice: '99.000',
+    price: '49.000',
     description: 'Untuk pernikahan sederhana dan elegan',
     features: [
-      'Desain template standar',
-      'Galeri foto (maks. 20 foto)',
+      'Desain Tema Non Foto',
       'RSVP digital',
       'Peta lokasi',
-      'Musik latar (1 lagu)'
+      'Love story section',
+      'Countdown timer',
+      'Amplop digital',
+      'Coba 1 template sebelum memilih'
     ]
   },
   {
     name: 'Premium',
-    price: '499K',
+    originalPrice: '129.000',
+    price: '64.000',
     description: 'Untuk pernikahan yang lebih spesial',
     features: [
-      'Semua fitur Basic',
-      'Desain template premium',
-      'Galeri foto (maks. 50 foto)',
-      'Love story section',
-      'Musik latar (3 lagu)',
-      'Amplop digital',
-      'Countdown timer'
+      'Semua fitur Non Foto',
+      'Desain Tema Premium',
+      'Galeri foto (maks. 20 foto)',
+      'Revisi Unlimited',
+      'Custom Font dan Color (Kecuali Template Floral)',
+      'Coba 2 template sebelum memilih'
     ],
     popular: true
-  },
-  {
-    name: 'Exclusive',
-    price: '799K',
-    description: 'Untuk pernikahan yang tak terlupakan',
-    features: [
-      'Semua fitur Premium',
-      'Desain custom',
-      'Galeri foto unlimited',
-      'Video background',
-      'Musik latar unlimited',
-      'Dukungan prioritas',
-      'Revisi desain unlimited'
-    ]
   }
 ];
 
@@ -58,7 +47,7 @@ export default function Pricing() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {plans.map((plan) => (
             <div
               key={plan.name}
@@ -75,6 +64,12 @@ export default function Pricing() {
                 </div>
               )}
 
+              <div className="absolute -top-4 right-4">
+                <span className="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                  Diskon 50%
+                </span>
+              </div>
+
               <div className="text-center mb-8">
                 <h3 className="font-heading font-bold text-2xl text-neutral-dark mb-2">
                   {plan.name}
@@ -82,8 +77,11 @@ export default function Pricing() {
                 <p className="text-neutral-dark/60 font-body mb-4">
                   {plan.description}
                 </p>
-                <div className="flex items-baseline justify-center">
-                  <span className="font-heading font-bold text-4xl text-wedera-primary">
+                <div className="flex flex-col items-center">
+                  <span className="font-heading text-3xl text-neutral-dark/60 line-through">
+                    Rp {plan.originalPrice}
+                  </span>
+                  <span className="font-heading font-bold text-6xl text-wedera-primary">
                     Rp {plan.price}
                   </span>
                 </div>

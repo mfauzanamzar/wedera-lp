@@ -5,9 +5,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const categories = [
+  { id: 21, name: 'Bugoy' },
   { id: 20, name: 'Minimalis' },
-  { id: 21, name: 'Floral' },
-  { id: 22, name: 'Adat' }
+  { id: 22, name: 'Floral' },
+  { id: 23, name: 'Adat' },
+  { id: 24, name: 'Non Foto' },
+  { id: 25, name: 'Art' },
+  { id: 26, name: 'Luxury' },
+  { id: 27, name: 'Luna' },
 ];
 
 interface Template {
@@ -30,16 +35,29 @@ export default function Catalog() {
   const [activeCategory, setActiveCategory] = useState(categories[0]);
   const [templates, setTemplates] = useState<Template[]>([]);
   const [loading, setLoading] = useState(true);
+  const [categoryCache, setCategoryCache] = useState<Record<number, Template[]>>({});
 
   useEffect(() => {
     const fetchTemplates = async () => {
+      // Check if data exists in cache
+      if (categoryCache[activeCategory.id]) {
+        setTemplates(categoryCache[activeCategory.id]);
+        setLoading(false);
+        return;
+      }
+
       setLoading(true);
       try {
         const response = await fetch(
-          `${process.env.NEXT_PUBLIC_API_URL}/posts?categories=${activeCategory.id}&_embed`
+          `${process.env.NEXT_PUBLIC_API_URL}/posts?categories=${activeCategory.id}&_embed&per_page=20`
         );
         const data = await response.json();
         setTemplates(data);
+        // Store in cache
+        setCategoryCache(prev => ({
+          ...prev,
+          [activeCategory.id]: data
+        }));
       } catch (error) {
         console.error('Error fetching templates:', error);
       }
@@ -47,7 +65,7 @@ export default function Catalog() {
     };
 
     fetchTemplates();
-  }, [activeCategory.id]);
+  }, [activeCategory.id, categoryCache]);
 
   return (
     <section className="py-16 lg:py-20 bg-white">
@@ -68,7 +86,7 @@ export default function Catalog() {
         <div 
           data-aos="fade-up"
           data-aos-delay="100"
-          className="flex justify-center space-x-4 mb-12"
+          className="grid grid-cols-2 lg:grid-cols-8 justify-center gap-4 mb-12"
         >
           {categories.map((category) => (
             <button
@@ -90,7 +108,7 @@ export default function Catalog() {
           <div 
             data-aos="fade-up"
             data-aos-delay="200"
-            className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8"
+            className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8"
           >
             {[1, 2, 3, 4, 5, 6].map((i) => (
               <div
@@ -104,7 +122,7 @@ export default function Catalog() {
           <div 
                       data-aos="fade-up"
             data-aos-delay="200"
-          className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+          className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8">
             {templates.map((template) => (
               <Link
                 key={template.id}
@@ -119,6 +137,7 @@ export default function Catalog() {
                     alt={template.title.rendered}
                     fill
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
                     <div className="p-3 sm:p-4 md:p-6 text-white w-full">

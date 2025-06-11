@@ -10,15 +10,11 @@ const faqs = [
   },
   {
     question: 'Bagaimana cara membagikan undangan?',
-    answer: 'Anda dapat membagikan undangan digital melalui WhatsApp, email, atau media sosial. Setiap undangan memiliki link unik yang dapat dibagikan dengan mudah ke semua tamu undangan.'
+    answer: 'Kami menyediakan generator link undangan di website, di mana Anda hanya perlu menginput nama tamu. Setelah itu, Anda akan mendapatkan link undangan khusus yang bisa langsung dibagikan ke tamu melalui WhatsApp, email, atau media sosial.'
   },
   {
     question: 'Apakah saya bisa request desain custom?',
     answer: 'Ya, pada paket Exclusive, Anda dapat meminta desain custom sesuai dengan keinginan Anda. Tim desainer kami akan membantu mewujudkan konsep undangan yang Anda inginkan.'
-  },
-  {
-    question: 'Apakah undangan bisa diakses tanpa internet?',
-    answer: 'Undangan digital membutuhkan koneksi internet untuk diakses. Namun, kami menyediakan fitur offline mode yang memungkinkan tamu menyimpan undangan untuk dibuka kembali tanpa internet.'
   },
   {
     question: 'Berapa lama proses pembuatan undangan?',
