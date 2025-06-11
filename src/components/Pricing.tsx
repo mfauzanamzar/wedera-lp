@@ -1,4 +1,4 @@
-import { Check } from 'lucide-react';
+import { Check, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 const plans = [
@@ -52,7 +52,7 @@ export default function Pricing() {
             <div
               key={plan.name}
               data-aos="fade-up"
-              className={`relative bg-white rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 p-8 ${
+              className={`relative bg-white rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 p-8 flex flex-col  ${
                 plan.popular ? 'ring-2 ring-wedera-primary' : ''
               }`}
             >
@@ -64,11 +64,7 @@ export default function Pricing() {
                 </div>
               )}
 
-              <div className="absolute -top-4 right-4">
-                <span className="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                  Diskon 50%
-                </span>
-              </div>
+    
 
               <div className="text-center mb-8">
                 <h3 className="font-heading font-bold text-2xl text-neutral-dark mb-2">
@@ -78,12 +74,20 @@ export default function Pricing() {
                   {plan.description}
                 </p>
                 <div className="flex flex-col items-center">
-                  <span className="font-heading text-3xl text-neutral-dark/60 line-through">
-                    Rp {plan.originalPrice}
-                  </span>
-                  <span className="font-heading font-bold text-6xl text-wedera-primary">
+                  <div className="relative">
+                    <span className="font-heading text-3xl text-neutral-dark/60 line-through">
+                      Rp {plan.originalPrice}
+                    </span>
+                    <div className="absolute -top-2 -right-12 bg-red-500 text-white text-xs px-2 py-0.5 rounded-full">
+                      -50%
+                    </div>
+                  </div>
+                  <span className="font-heading font-bold text-6xl text-wedera-primary mt-2">
                     Rp {plan.price}
                   </span>
+                  <div className="mt-2 text-sm text-neutral-dark/60">
+                    Hemat Rp {parseInt(plan.originalPrice.replace('.', '')) - parseInt(plan.price.replace('.', ''))}
+                  </div>
                 </div>
               </div>
 
@@ -100,13 +104,16 @@ export default function Pricing() {
 
               <Link
                 href="/order"
-                className={`block w-full py-3 rounded-full font-medium transition-colors duration-300 text-center ${
+                className={`block w-full py-3 rounded-full font-medium transition-colors duration-300 text-center group mt-auto ${
                   plan.popular
                     ? 'bg-wedera-primary text-white hover:bg-wedera-secondary'
                     : 'bg-wedera-pastel text-wedera-primary hover:bg-wedera-primary hover:text-white'
                 }`}
               >
-                Pesan Sekarang
+                <span className="flex items-center justify-center gap-2">
+                  Pesan Sekarang
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </span>
               </Link>
             </div>
           ))}

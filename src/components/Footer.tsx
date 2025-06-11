@@ -1,4 +1,6 @@
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+  
   return (
     <footer 
       data-aos="fade-up"
@@ -7,7 +9,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <p className="font-body text-sm text-white/80">
-            © 2024 Wedera. All rights reserved.
+            © {currentYear} Wedera. All rights reserved.
           </p>
         </div>
       </div>
