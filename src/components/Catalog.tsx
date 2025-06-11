@@ -135,8 +135,9 @@ export default function Catalog() {
                   <Image
                     src={template._embedded?.['wp:featuredmedia']?.[0]?.source_url || '/placeholder.jpg'}
                     alt={template.title.rendered}
-                    fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    width={215}
+                    height={286}
+                    className="object-cover transition-transform duration-300 group-hover:scale-105 w-full h-full object-cover"
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
