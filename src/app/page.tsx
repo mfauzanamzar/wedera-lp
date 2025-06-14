@@ -10,11 +10,14 @@ import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 
 export default function Home() {
+  // Set the end date for the discount banner (e.g., December 31, 2024)
+  const discountEndDate = new Date('2025-06-30T23:59:59');
+
   return (
     <main className="min-h-screen">
       <Navbar />
       <Hero />
-      <DiscountBanner />
+      <DiscountBanner endDate={discountEndDate} />
       <Features />
       <Catalog />
       <Pricing />

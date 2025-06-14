@@ -46,13 +46,23 @@ export default function Hero() {
               Ciptakan undangan pernikahan digital yang memukau, mudah dibagikan, dan penuh makna.
             </p>
             
-            <Link 
-              href="/order"
-              data-aos="fade-up"
-              className="inline-block bg-wedera-primary hover:bg-wedera-secondary text-white px-8 py-4 rounded-full text-lg font-medium transition-colors duration-300 shadow-lg hover:shadow-xl"
-            >
-              Buat Undangan Sekarang
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-4" data-aos="fade-up">
+              <Link 
+                href="https://wa.me/6282151527990"
+                target="_blank"
+                className="inline-block bg-wedera-primary hover:bg-wedera-secondary text-white px-8 py-4 rounded-full text-lg font-medium transition-colors duration-300 shadow-lg hover:shadow-xl text-center"
+              >
+                Buat Undangan Sekarang
+              </Link>
+              
+              <a 
+                href="#catalog"
+                className="inline-block bg-white hover:bg-wedera-pastel text-wedera-primary px-8 py-4 rounded-full text-lg font-medium transition-colors duration-300 shadow-lg hover:shadow-xl text-center border-2 border-wedera-primary"
+              >
+                Lihat Catalog
+              </a>
+            </div>
+            
           </div>
           
           <div 

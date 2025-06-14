@@ -8,8 +8,8 @@ const contactInfo = {
       name: "WhatsApp",
       icon: MessageCircle,
       description: "Chat dengan kami",
-      value: "0812-3456-7890",
-      link: "https://wa.me/6281234567890"
+      value: "0821-5152-7990",
+      link: "https://wa.me/6282151527990"
     },
     {
       name: "Email",

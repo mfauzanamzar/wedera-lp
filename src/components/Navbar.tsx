@@ -12,7 +12,8 @@ export default function Navbar() {
           </Link>
           
           <Link 
-            href="/order" 
+            href="https://wa.me/6282151527990" 
+            target="_blank"
             className="bg-wedera-primary hover:bg-wedera-secondary text-white px-6 py-2 rounded-full transition-colors duration-300 font-heading font-medium"
           >
             Pesan Sekarang

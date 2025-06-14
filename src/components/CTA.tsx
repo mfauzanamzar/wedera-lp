@@ -17,7 +17,8 @@ export default function CTA() {
           Ciptakan momen spesial pernikahanmu dengan undangan digital yang elegan dan memukau
         </p>
         <Link
-          href="/order"
+          href="https://wa.me/6282151527990"
+          target="_blank"
           data-aos="fade-up"
           className="inline-block bg-white text-wedera-primary hover:bg-wedera-pastel px-8 py-4 rounded-full text-lg font-medium transition-colors duration-300 shadow-lg hover:shadow-xl"
         >

@@ -3,7 +3,11 @@
 import { useEffect, useState } from 'react';
 import { Clock } from 'lucide-react';
 
-export default function DiscountBanner() {
+interface DiscountBannerProps {
+  endDate: Date;
+}
+
+export default function DiscountBanner({ endDate }: DiscountBannerProps) {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -12,10 +16,6 @@ export default function DiscountBanner() {
   });
 
   useEffect(() => {
-    // Set end date to 16 days from now
-    const endDate = new Date();
-    endDate.setDate(endDate.getDate() + 16);
-
     const timer = setInterval(() => {
       const now = new Date();
       const difference = endDate.getTime() - now.getTime();
@@ -33,7 +33,7 @@ export default function DiscountBanner() {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [endDate]);
 
   return (
     <section className="py-12 bg-gradient-to-r from-wedera-primary to-wedera-secondary">
@@ -93,7 +93,7 @@ export default function DiscountBanner() {
           <div className="flex items-center justify-center gap-2 text-white/90">
             <Clock className="w-5 h-5" />
             <span className="font-body">
-              Promo berakhir pada {new Date(new Date().setDate(new Date().getDate() + 16)).toLocaleDateString('id-ID', { 
+              Promo berakhir pada {endDate.toLocaleDateString('id-ID', { 
                 day: 'numeric',
                 month: 'long',
                 year: 'numeric'

@@ -4,8 +4,8 @@ import Link from 'next/link';
 const plans = [
   {
     name: 'Non Foto',
-    originalPrice: '99.000',
-    price: '49.000',
+    originalPrice: '79.000',
+    price: '55.000',
     description: 'Untuk pernikahan sederhana dan elegan',
     features: [
       'Desain Tema Non Foto',
@@ -20,12 +20,12 @@ const plans = [
   {
     name: 'Premium',
     originalPrice: '129.000',
-    price: '64.000',
+    price: '90.000',
     description: 'Untuk pernikahan yang lebih spesial',
     features: [
       'Semua fitur Non Foto',
       'Desain Tema Premium',
-      'Galeri foto (maks. 20 foto)',
+      'Galeri (maks. 20 foto + 1 Video)',
       'Revisi Unlimited',
       'Custom Font dan Color (Kecuali Template Floral)',
       'Coba 2 template sebelum memilih'
@@ -33,6 +33,8 @@ const plans = [
     popular: true
   }
 ];
+
+const discount = 30;
 
 export default function Pricing() {
   return (
@@ -75,14 +77,14 @@ export default function Pricing() {
                 </p>
                 <div className="flex flex-col items-center">
                   <div className="relative">
-                    <span className="font-heading text-3xl text-neutral-dark/60 line-through">
+                    <span className="font-heading text-xl lg:text-3xl text-neutral-dark/60 line-through">
                       Rp {plan.originalPrice}
                     </span>
                     <div className="absolute -top-2 -right-12 bg-red-500 text-white text-xs px-2 py-0.5 rounded-full">
-                      -50%
+                      -{discount}%
                     </div>
                   </div>
-                  <span className="font-heading font-bold text-6xl text-wedera-primary mt-2">
+                  <span className="font-heading font-bold text-5xl lg:text-6xl text-wedera-primary mt-2">
                     Rp {plan.price}
                   </span>
                   <div className="mt-2 text-sm text-neutral-dark/60">

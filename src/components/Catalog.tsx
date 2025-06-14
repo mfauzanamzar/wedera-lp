@@ -68,7 +68,7 @@ export default function Catalog() {
   }, [activeCategory.id, categoryCache]);
 
   return (
-    <section className="py-16 lg:py-20 bg-white">
+    <section id="catalog" className="py-16 lg:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div 
           data-aos="fade-up"
