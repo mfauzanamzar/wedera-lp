@@ -17,8 +17,14 @@ export default function DiscountBanner({ endDate }: DiscountBannerProps) {
 
   useEffect(() => {
     const timer = setInterval(() => {
+      // Get current time in WIB
       const now = new Date();
-      const difference = endDate.getTime() - now.getTime();
+      const wibOffset = 7 * 60; // WIB is UTC+7
+      const localOffset = now.getTimezoneOffset(); // Get local timezone offset in minutes
+      const wibNow = new Date(now.getTime() + (wibOffset + localOffset) * 60000);
+
+      // Calculate difference in WIB timezone
+      const difference = endDate.getTime() - wibNow.getTime();
 
       if (difference > 0) {
         setTimeLeft({
@@ -57,7 +63,7 @@ export default function DiscountBanner({ endDate }: DiscountBannerProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center" data-aos="fade-up">
           <h2 className="font-heading font-bold text-3xl md:text-4xl text-white mb-4">
-            Promo Spesial! <span className="text-wedera-primary bg-white px-2 py-1 rounded-md ring-animation">Diskon 50%</span>
+            Promo Spesial! <span className="text-wedera-primary bg-white px-2 py-1 rounded-md ring-animation">Diskon 30%</span>
           </h2>
           <p className="text-white/90 font-body text-lg mb-8">
             Dapatkan undangan digital elegan dengan harga spesial. Promo berakhir dalam:
@@ -96,7 +102,8 @@ export default function DiscountBanner({ endDate }: DiscountBannerProps) {
               Promo berakhir pada {endDate.toLocaleDateString('id-ID', { 
                 day: 'numeric',
                 month: 'long',
-                year: 'numeric'
+                year: 'numeric',
+                timeZone: 'Asia/Jakarta'
               })}
             </span>
           </div>
