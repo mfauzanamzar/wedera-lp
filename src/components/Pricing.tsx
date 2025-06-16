@@ -105,7 +105,8 @@ export default function Pricing() {
               </ul>
 
               <Link
-                href="/order"
+                href="https://wa.me/6281234567890"
+                target="_blank"
                 className={`block w-full py-3 rounded-full font-medium transition-colors duration-300 text-center group mt-auto ${
                   plan.popular
                     ? 'bg-wedera-primary text-white hover:bg-wedera-secondary'
