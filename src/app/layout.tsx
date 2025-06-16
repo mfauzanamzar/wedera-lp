@@ -71,6 +71,12 @@ const productJsonLd = {
   "@type": "Product",
   "name": "Undangan Digital Wedera",
   "description": "Buat undangan digital dan online yang elegan untuk pernikahan Anda",
+  "image": [
+    "https://www.wedera.id/images/ogimg.png",
+    "https://www.wedera.id/images/tema-hero-adat-1.webp",
+    "https://www.wedera.id/images/tema-hero-art-1.webp",
+    "https://www.wedera.id/images/tema-hero-jawa-1.webp"
+  ],
   "offers": [
     {
       "@type": "Offer",
