@@ -105,7 +105,7 @@ export default function Pricing() {
               </ul>
 
               <Link
-                href="https://wa.me/6281234567890"
+                href="https://wa.me/6282151527990"
                 target="_blank"
                 className={`block w-full py-3 rounded-full font-medium transition-colors duration-300 text-center group mt-auto ${
                   plan.popular
