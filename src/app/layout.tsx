@@ -3,6 +3,7 @@ import { Inter, Poppins, Playfair_Display, Great_Vibes } from "next/font/google"
 import "./globals.css";
 import AOSInit from "@/components/AOSInit";
 import Script from "next/script";
+import { Analytics } from '@vercel/analytics/next';
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const poppins = Poppins({
@@ -238,6 +239,7 @@ export default function RootLayout({
       <body className={`${inter.variable} ${poppins.variable} ${playfair.variable} ${greatVibes.variable} font-body`}>
         <AOSInit />
         {children}
+        <Analytics />
       </body>
     </html>
   );
