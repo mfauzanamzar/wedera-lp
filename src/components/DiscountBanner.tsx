@@ -15,6 +15,11 @@ export default function DiscountBanner({ endDate }: DiscountBannerProps) {
     seconds: 0
   });
 
+  // Get promo configuration from environment variables
+  const promoTitle = process.env.NEXT_PUBLIC_PROMO_TITLE || 'Promo Spesial!';
+  const promoPercentage = process.env.NEXT_PUBLIC_PROMO_PERCENTAGE || '30';
+  const promoDescription = process.env.NEXT_PUBLIC_PROMO_DESCRIPTION || 'Dapatkan undangan digital elegan dengan harga spesial. Promo berakhir dalam:';
+
   useEffect(() => {
     const timer = setInterval(() => {
       // Get current time in WIB
@@ -63,10 +68,10 @@ export default function DiscountBanner({ endDate }: DiscountBannerProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center" data-aos="fade-up">
           <h2 className="font-heading font-bold text-3xl md:text-4xl text-white mb-4">
-            Promo Spesial! <span className="text-wedera-primary bg-white px-2 py-1 rounded-md ring-animation">Diskon 30%</span>
+            {promoTitle} <span className="text-wedera-primary bg-white px-2 py-1 rounded-md ring-animation">Diskon {promoPercentage}%</span>
           </h2>
           <p className="text-white/90 font-body text-lg mb-8">
-            Dapatkan undangan digital elegan dengan harga spesial. Promo berakhir dalam:
+            {promoDescription}
           </p>
 
           <div className="flex justify-center items-center gap-4 md:gap-8 mb-8">

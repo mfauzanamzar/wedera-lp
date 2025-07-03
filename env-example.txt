@@ -1,0 +1,57 @@
+# ===========================================
+# WEDERA ENVIRONMENT CONFIGURATION
+# ===========================================
+# Copy this file to .env and update the values
+
+# WordPress API Configuration
+# Replace with your WordPress REST API URL
+NEXT_PUBLIC_API_URL=https://invitation.wedera.id/wp-json/wp/v2
+
+# Promo Banner Configuration
+# Customize your promotional banner settings
+NEXT_PUBLIC_SHOW_DISCOUNT_BANNER=true
+NEXT_PUBLIC_PROMO_TITLE=Promo Spesial!
+NEXT_PUBLIC_PROMO_PERCENTAGE=30
+NEXT_PUBLIC_PROMO_DESCRIPTION=Dapatkan undangan digital elegan dengan harga spesial. Promo berakhir dalam:
+NEXT_PUBLIC_PROMO_END_DATE=2025-06-30T23:59:59
+
+# Pricing Configuration
+# Non Foto Package Pricing
+NEXT_PUBLIC_PRICE_NON_FOTO_ORIGINAL=79.000
+NEXT_PUBLIC_PRICE_NON_FOTO=55.000
+
+# Premium Package Pricing
+NEXT_PUBLIC_PRICE_PREMIUM_ORIGINAL=129.000
+NEXT_PUBLIC_PRICE_PREMIUM=90.000
+
+# Site Configuration
+NEXT_PUBLIC_SITE_URL=https://wedera.id
+
+# ===========================================
+# USAGE EXAMPLES:
+# ===========================================
+# 
+# For Christmas Sale:
+# NEXT_PUBLIC_SHOW_DISCOUNT_BANNER=true
+# NEXT_PUBLIC_PROMO_TITLE=Christmas Sale!
+# NEXT_PUBLIC_PROMO_PERCENTAGE=40
+# NEXT_PUBLIC_PROMO_DESCRIPTION=Rayakan Natal dengan diskon spesial undangan digital! Promo terbatas:
+# NEXT_PUBLIC_PROMO_END_DATE=2025-12-25T23:59:59
+# NEXT_PUBLIC_PRICE_NON_FOTO_ORIGINAL=79.000
+# NEXT_PUBLIC_PRICE_NON_FOTO=47.400
+# NEXT_PUBLIC_PRICE_PREMIUM_ORIGINAL=129.000
+# NEXT_PUBLIC_PRICE_PREMIUM=77.400
+# 
+# For New Year Promo:
+# NEXT_PUBLIC_SHOW_DISCOUNT_BANNER=true
+# NEXT_PUBLIC_PROMO_TITLE=Tahun Baru, Promo Baru!
+# NEXT_PUBLIC_PROMO_PERCENTAGE=25
+# NEXT_PUBLIC_PROMO_DESCRIPTION=Mulai tahun baru dengan undangan digital yang memukau. Diskon berakhir:
+# NEXT_PUBLIC_PROMO_END_DATE=2025-01-15T23:59:59
+# NEXT_PUBLIC_PRICE_NON_FOTO_ORIGINAL=79.000
+# NEXT_PUBLIC_PRICE_NON_FOTO=59.250
+# NEXT_PUBLIC_PRICE_PREMIUM_ORIGINAL=129.000
+# NEXT_PUBLIC_PRICE_PREMIUM=96.750
+# 
+# To hide the discount banner:
+# NEXT_PUBLIC_SHOW_DISCOUNT_BANNER=false 

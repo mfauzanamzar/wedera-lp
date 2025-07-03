@@ -1,42 +1,44 @@
 import { Check, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
-const plans = [
-  {
-    name: 'Non Foto',
-    originalPrice: '79.000',
-    price: '55.000',
-    description: 'Untuk pernikahan sederhana dan elegan',
-    features: [
-      'Desain Tema Non Foto',
-      'RSVP digital',
-      'Peta lokasi',
-      'Love story section',
-      'Countdown timer',
-      'Amplop digital',
-      'Coba 1 template sebelum memilih'
-    ]
-  },
-  {
-    name: 'Premium',
-    originalPrice: '129.000',
-    price: '90.000',
-    description: 'Untuk pernikahan yang lebih spesial',
-    features: [
-      'Semua fitur Non Foto',
-      'Desain Tema Premium',
-      'Galeri (maks. 20 foto + 1 Video)',
-      'Revisi Unlimited',
-      'Custom Font dan Color (Kecuali Template Floral)',
-      'Coba 2 template sebelum memilih'
-    ],
-    popular: true
-  }
-];
-
-const discount = 30;
-
 export default function Pricing() {
+  // Get discount percentage from environment variables to match promo banner
+  const discount = parseInt(process.env.NEXT_PUBLIC_PROMO_PERCENTAGE || '30');
+  
+  // Get pricing from environment variables with fallback to default values
+  const plans = [
+    {
+      name: 'Non Foto',
+      originalPrice: process.env.NEXT_PUBLIC_PRICE_NON_FOTO_ORIGINAL || '79.000',
+      price: process.env.NEXT_PUBLIC_PRICE_NON_FOTO || '55.000',
+      description: 'Untuk pernikahan sederhana dan elegan',
+      features: [
+        'Desain Tema Non Foto',
+        'RSVP digital',
+        'Peta lokasi',
+        'Love story section',
+        'Countdown timer',
+        'Amplop digital',
+        'Coba 1 template sebelum memilih'
+      ]
+    },
+    {
+      name: 'Premium',
+      originalPrice: process.env.NEXT_PUBLIC_PRICE_PREMIUM_ORIGINAL || '129.000',
+      price: process.env.NEXT_PUBLIC_PRICE_PREMIUM || '90.000',
+      description: 'Untuk pernikahan yang lebih spesial',
+      features: [
+        'Semua fitur Non Foto',
+        'Desain Tema Premium',
+        'Galeri (maks. 20 foto + 1 Video)',
+        'Revisi Unlimited',
+        'Custom Font dan Color (Kecuali Template Floral)',
+        'Coba 2 template sebelum memilih'
+      ],
+      popular: true
+    }
+  ];
+
   return (
     <section className="py-16 lg:py-20 bg-gradient-to-b from-white to-wedera-pastel">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -65,8 +67,6 @@ export default function Pricing() {
                   </span>
                 </div>
               )}
-
-    
 
               <div className="text-center mb-8">
                 <h3 className="font-heading font-bold text-2xl text-neutral-dark mb-2">
