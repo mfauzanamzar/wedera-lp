@@ -5,6 +5,9 @@ export default function Pricing() {
   // Get discount percentage from environment variables to match promo banner
   const discount = parseInt(process.env.NEXT_PUBLIC_PROMO_PERCENTAGE || '30');
   
+  // Check if discount banner is shown to determine pricing display
+  const showDiscountBanner = process.env.NEXT_PUBLIC_SHOW_DISCOUNT_BANNER === 'true';
+  
   // Get pricing from environment variables with fallback to default values
   const plans = [
     {
@@ -76,20 +79,30 @@ export default function Pricing() {
                   {plan.description}
                 </p>
                 <div className="flex flex-col items-center">
-                  <div className="relative">
-                    <span className="font-heading text-xl lg:text-3xl text-neutral-dark/60 line-through">
+                  {/* Show discount pricing only when banner is enabled */}
+                  {showDiscountBanner ? (
+                    <>
+                      <div className="relative">
+                        <span className="font-heading text-xl lg:text-3xl text-neutral-dark/60 line-through">
+                          Rp {plan.originalPrice}
+                        </span>
+                        <div className="absolute -top-2 -right-12 bg-red-500 text-white text-xs px-2 py-0.5 rounded-full">
+                          -{discount}%
+                        </div>
+                      </div>
+                      <span className="font-heading font-bold text-5xl lg:text-6xl text-wedera-primary mt-2">
+                        Rp {plan.price}
+                      </span>
+                      <div className="mt-2 text-sm text-neutral-dark/60">
+                        Hemat Rp {parseInt(plan.originalPrice.replace('.', '')) - parseInt(plan.price.replace('.', ''))}
+                      </div>
+                    </>
+                  ) : (
+                    /* Show regular pricing when banner is disabled */
+                    <span className="font-heading font-bold text-5xl lg:text-6xl text-wedera-primary mt-2">
                       Rp {plan.originalPrice}
                     </span>
-                    <div className="absolute -top-2 -right-12 bg-red-500 text-white text-xs px-2 py-0.5 rounded-full">
-                      -{discount}%
-                    </div>
-                  </div>
-                  <span className="font-heading font-bold text-5xl lg:text-6xl text-wedera-primary mt-2">
-                    Rp {plan.price}
-                  </span>
-                  <div className="mt-2 text-sm text-neutral-dark/60">
-                    Hemat Rp {parseInt(plan.originalPrice.replace('.', '')) - parseInt(plan.price.replace('.', ''))}
-                  </div>
+                  )}
                 </div>
               </div>
 

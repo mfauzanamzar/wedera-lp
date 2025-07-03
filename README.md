@@ -173,6 +173,9 @@ Gunakan format ISO 8601: `YYYY-MM-DDTHH:mm:ss`
 ### Fitur Otomatis:
 
 - **Sinkronisasi Discount**: Persentase diskon di pricing section akan otomatis mengikuti `NEXT_PUBLIC_PROMO_PERCENTAGE`
+- **Smart Pricing Display**: Tampilan harga otomatis berubah berdasarkan status banner promo
+  - Banner ON (`true`): Menampilkan harga asli (coret), badge diskon, harga promo, dan jumlah hemat
+  - Banner OFF (`false`): Hanya menampilkan harga saat ini tanpa elemen diskon
 - **Countdown Timer**: Timer akan otomatis berhenti saat mencapai tanggal berakhir
 - **Timezone**: Menggunakan WIB (UTC+7) untuk countdown timer
 - **Fallback Values**: Jika environment variables tidak diset, akan menggunakan nilai default

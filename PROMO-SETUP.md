@@ -102,6 +102,9 @@ NEXT_PUBLIC_PRICE_PREMIUM=129.000
 - **Persentase**: Hanya masukkan angka tanpa simbol % (contoh: 30, bukan 30%)
 - **Format Harga**: Gunakan format 99.000 (dengan titik sebagai pemisah ribuan)
 - **Banner Toggle**: Set `NEXT_PUBLIC_SHOW_DISCOUNT_BANNER=false` untuk menyembunyikan banner
+- **Smart Pricing Display**: Tampilan harga berubah otomatis berdasarkan status banner
+  - Banner ON: Tampil harga asli (coret) + badge diskon + harga promo + jumlah hemat
+  - Banner OFF: Tampil harga saat ini saja (clean display)
 - **Pricing Sync**: Diskon di pricing section otomatis mengikuti NEXT_PUBLIC_PROMO_PERCENTAGE
 - **Auto Calculate**: Tidak perlu menghitung harga diskon secara manual, cukup set harga final yang diinginkan
 
@@ -114,6 +117,8 @@ NEXT_PUBLIC_PRICE_PREMIUM=129.000
 5. **Hide When Needed**: Sembunyikan banner saat tidak ada promo aktif untuk tampilan yang bersih
 6. **Price Flexibility**: Gunakan pricing variables untuk menyesuaikan harga tanpa mengubah kode
 7. **Normal Mode**: Set harga asli = harga promo untuk mode tanpa diskon
+8. **Clean Pricing**: Saat banner OFF, pricing section otomatis tampil bersih tanpa elemen diskon
+9. **Professional Look**: Gunakan mode banner OFF untuk presentasi atau periode non-promo
 
 ## 📞 Support
 

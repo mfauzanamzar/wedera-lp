@@ -9,6 +9,7 @@ NEXT_PUBLIC_API_URL=https://invitation.wedera.id/wp-json/wp/v2
 
 # Promo Banner Configuration
 # Customize your promotional banner settings
+# Note: This also controls pricing display (true = show discount pricing, false = clean pricing)
 NEXT_PUBLIC_SHOW_DISCOUNT_BANNER=true
 NEXT_PUBLIC_PROMO_TITLE=Promo Spesial!
 NEXT_PUBLIC_PROMO_PERCENTAGE=30
