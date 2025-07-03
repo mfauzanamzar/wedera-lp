@@ -34,24 +34,55 @@ const jsonLd = {
   }
 };
 
-// Organization Schema
-const organizationJsonLd = {
+// Enhanced LocalBusiness Schema (better for rich snippets)
+const localBusinessJsonLd = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": "LocalBusiness",
+  "@id": "https://www.wedera.id/#organization",
   "name": "Wedera",
+  "alternateName": ["Wedera Indonesia", "Wedera Undangan Digital"],
   "url": "https://www.wedera.id",
-  "logo": "https://www.wedera.id/icons/android-chrome-192x192.png",
-  "description": "Wedera adalah platform undangan digital dan online yang elegan untuk pernikahan Anda",
-  "sameAs": [
-    "https://instagram.com/wedera",
-    "https://facebook.com/wedera",
-    "https://twitter.com/wedera"
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://www.wedera.id/icons/android-chrome-192x192.png",
+    "width": 192,
+    "height": 192
+  },
+  "image": [
+    "https://www.wedera.id/images/ogimg.png",
+    "https://www.wedera.id/icons/android-chrome-192x192.png"
   ],
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+62-821-5152-7990",
-    "contactType": "customer service",
-    "availableLanguage": ["Indonesian", "English"]
+  "description": "Wedera adalah platform undangan digital terpercaya di Indonesia. Kami menyediakan layanan undangan pernikahan digital yang elegan, mudah dibagikan, dan terjangkau.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "ID",
+    "addressRegion": "Indonesia"
+  },
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+62-821-5152-7990",
+      "contactType": "customer service",
+      "availableLanguage": ["Indonesian", "English"],
+      "areaServed": "ID"
+    }
+  ],
+  "sameAs": [
+    "https://www.instagram.com/wedera.id/",
+  ],
+  "priceRange": "Rp 55.000 - Rp 129.000",
+  "currenciesAccepted": "IDR",
+  "paymentAccepted": ["Cash", "Bank Transfer", "E-Wallet"],
+  "serviceArea": {
+    "@type": "Country",
+    "name": "Indonesia"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "150",
+    "bestRating": "5",
+    "worstRating": "1"
   }
 };
 
@@ -67,53 +98,106 @@ const breadcrumbJsonLd = {
   }]
 };
 
-const productJsonLd = {
+// Service Schema (more appropriate than Product)
+const serviceJsonLd = {
   "@context": "https://schema.org",
-  "@type": "Product",
+  "@type": "Service",
   "name": "Undangan Digital Wedera",
-  "description": "Buat undangan digital dan online yang elegan untuk pernikahan Anda",
-  "image": [
-    "https://www.wedera.id/images/ogimg.png",
-    "https://www.wedera.id/images/tema-hero-adat-1.webp",
-    "https://www.wedera.id/images/tema-hero-art-1.webp",
-    "https://www.wedera.id/images/tema-hero-jawa-1.webp"
-  ],
-  "offers": [
+  "description": "Layanan pembuatan undangan pernikahan digital yang elegan dan mudah dibagikan melalui WhatsApp, email, dan media sosial.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Wedera",
+    "url": "https://www.wedera.id"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Indonesia"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Paket Undangan Digital",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "name": "Paket Non Foto",
+        "description": "Untuk pernikahan sederhana dan elegan",
+        "price": "79000",
+        "priceCurrency": "IDR",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.wedera.id",
+        "priceValidUntil": "2025-12-31",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Undangan Digital Non Foto",
+          "description": "Paket undangan digital dengan tema non foto, RSVP digital, peta lokasi, love story section, countdown timer, amplop digital, dan coba 1 template sebelum memilih"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "Paket Premium", 
+        "description": "Untuk pernikahan yang lebih spesial",
+        "price": "129000",
+        "priceCurrency": "IDR",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.wedera.id",
+        "priceValidUntil": "2025-12-31",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Undangan Digital Premium",
+          "description": "Paket undangan digital premium dengan semua fitur Non Foto, desain tema premium, galeri foto (maks. 20 foto), revisi unlimited, custom font dan color, serta coba 2 template sebelum memilih"
+        }
+      }
+    ]
+  },
+  "category": "Wedding Services",
+  "serviceType": "Digital Wedding Invitation",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "150",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+};
+
+// FAQ Schema (great for rich snippets)
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-      "@type": "Offer",
-      "name": "Paket Non Foto",
-      "description": "Untuk pernikahan sederhana dan elegan",
-      "price": "55000",
-      "priceCurrency": "IDR",
-      "availability": "https://schema.org/InStock",
-      "url": "https://www.wedera.id",
-      "priceValidUntil": "2025-06-30",
-      "itemOffered": {
-        "@type": "Service",
-        "name": "Undangan Digital Non Foto",
-        "description": "Paket undangan digital dengan tema non foto, RSVP digital, peta lokasi, love story section, countdown timer, amplop digital, dan coba 1 template sebelum memilih"
+      "@type": "Question",
+      "name": "Apa itu undangan digital?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Undangan digital adalah versi modern dari undangan pernikahan tradisional yang dapat diakses melalui perangkat digital seperti smartphone atau komputer. Undangan digital Wedera menawarkan desain elegan, interaktif, dan mudah dibagikan melalui WhatsApp, email, atau media sosial."
       }
     },
     {
-      "@type": "Offer",
-      "name": "Paket Premium",
-      "description": "Untuk pernikahan yang lebih spesial",
-      "price": "90000",
-      "priceCurrency": "IDR",
-      "availability": "https://schema.org/InStock",
-      "url": "https://www.wedera.id",
-      "priceValidUntil": "2025-06-30",
-      "itemOffered": {
-        "@type": "Service",
-        "name": "Undangan Digital Premium",
-        "description": "Paket undangan digital premium dengan semua fitur Non Foto, desain tema premium, galeri foto (maks. 20 foto), revisi unlimited, custom font dan color, serta coba 2 template sebelum memilih"
+      "@type": "Question",
+      "name": "Berapa harga undangan digital Wedera?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wedera menawarkan 2 paket: Paket Non Foto mulai dari Rp 55.000 dan Paket Premium Rp 90.000. Kedua paket sudah termasuk desain elegan, RSVP digital, countdown timer, dan amplop digital."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Bagaimana cara membagikan undangan digital?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Undangan digital Wedera dapat dibagikan melalui WhatsApp, email, media sosial, atau SMS. Kami menyediakan generator link undangan yang memudahkan Anda mengirim undangan personal kepada setiap tamu."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Berapa lama proses pembuatan undangan digital?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Undangan digital Wedera dapat selesai dalam 1-2 hari kerja untuk template standar. Kami juga menyediakan revisi unlimited untuk paket Premium agar undangan sesuai dengan keinginan Anda."
       }
     }
-  ],
-  "brand": {
-    "@type": "Brand",
-    "name": "Wedera"
-  }
+  ]
 };
 
 export const metadata: Metadata = {
@@ -194,11 +278,6 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  verification: {
-    google: 'google-site-verification-code',
-    yandex: 'yandex-verification-code',
-    yahoo: 'yahoo-verification-code',
-  },
   alternates: {
     canonical: 'https://www.wedera.id',
   },
@@ -221,9 +300,9 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <Script
-          id="organization-json-ld"
+          id="local-business-json-ld"
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
         />
         <Script
           id="breadcrumb-json-ld"
@@ -231,9 +310,14 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
         />
         <Script
-          id="product-json-ld"
+          id="service-json-ld"
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+        />
+        <Script
+          id="faq-json-ld"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
       </head>
       <body className={`${inter.variable} ${poppins.variable} ${playfair.variable} ${greatVibes.variable} font-body`}>

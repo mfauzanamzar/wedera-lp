@@ -1,0 +1,125 @@
+# Wedera - Digital Wedding Invitation Platform
+
+## About This Website
+Wedera (wedera.id) is Indonesia's leading digital wedding invitation platform that creates elegant, interactive wedding invitations that can be shared via WhatsApp, email, and social media.
+
+## Business Information
+- **Company**: Wedera
+- **Website**: https://www.wedera.id
+- **Industry**: Wedding Services, Digital Design
+- **Target Market**: Indonesian couples planning weddings
+- **Service Area**: Indonesia (nationwide)
+- **Contact**: +62-821-5152-7990
+- **Social Media**: https://www.instagram.com/wedera.id/
+
+## Services Offered
+### Digital Wedding Invitation Packages
+1. **Paket Non Foto** - Rp 79.000
+   - Elegant non-photo templates
+   - Digital RSVP system
+   - Location maps
+   - Love story section
+   - Countdown timer
+   - Digital envelope (amplop digital)
+   - Try 1 template before choosing
+
+2. **Paket Premium** - Rp 129.000
+   - All Non Foto features
+   - Premium design themes
+   - Photo gallery (max 20 photos)
+   - Unlimited revisions
+   - Custom fonts and colors
+   - Try 2 templates before choosing
+
+## Key Features
+- **Templates**: Multiple categories including Adat (Traditional), Art, Jawa (Javanese), and Minimalist designs
+- **Interactive Elements**: RSVP forms, countdown timers, location maps, guest messages
+- **Easy Sharing**: WhatsApp generator, social media integration, email sharing
+- **Mobile Responsive**: Optimized for smartphones and tablets
+- **Fast Loading**: Optimized images and performance
+- **SEO Friendly**: Proper meta tags and structured data
+
+## Technology Stack
+- **Frontend**: Next.js 14 with TypeScript
+- **Styling**: Tailwind CSS
+- **CMS**: WordPress (headless) at invitation.wedera.id
+- **Hosting**: Hostinger
+- **Domain**: Main site at wedera.id, templates at invitation.wedera.id
+
+## Website Structure
+- **Homepage** (`/`): Main landing page with hero, features, pricing, and CTA
+- **Contact** (`/contact`): Contact information and inquiry forms
+- **Skills** (`/skills`): Company expertise and capabilities
+- **Templates**: Hosted on subdomain invitation.wedera.id
+- **Static Assets**: Images, icons, and media files
+
+## Target Keywords
+- undangan digital
+- undangan pernikahan online
+- undangan nikah digital
+- wedding invitation indonesia
+- undangan digital murah
+- undangan online indonesia
+
+## Customer Demographics
+- **Primary**: Indonesian couples aged 20-35
+- **Secondary**: Wedding planners and event organizers
+- **Geographic**: Major Indonesian cities (Jakarta, Bandung, Surabaya, Yogyakarta)
+- **Budget**: Mid-range couples seeking affordable digital solutions
+
+## Competitive Advantages
+- Affordable pricing compared to traditional printed invitations
+- Quick turnaround (1-2 days)
+- Unlimited sharing capability
+- Eco-friendly digital solution
+- Indonesian-focused designs and content
+- Local customer support
+
+## Business Model
+- **B2C**: Direct sales to couples
+- **Payment**: Bank transfer, e-wallet, cash
+- **Delivery**: Digital delivery via WhatsApp/email
+- **Support**: Customer service via WhatsApp and phone
+
+## SEO Strategy
+- Local SEO for Indonesian market
+- Long-tail keyword targeting
+- Rich snippets with structured data
+- Mobile-first indexing optimization
+- Social media integration for backlinks
+
+## Content Categories
+- Wedding invitation templates
+- Digital wedding solutions
+- Indonesian wedding traditions
+- Wedding planning tips
+- Design inspiration
+
+## Brand Positioning
+"Wedera makes wedding invitations accessible, affordable, and beautiful for modern Indonesian couples who want to share their special day digitally."
+
+## Customer Pain Points Addressed
+- High cost of traditional printed invitations
+- Difficulty in managing guest lists and RSVPs
+- Environmental concerns about paper waste
+- Need for easy sharing across digital platforms
+- Limited design customization options
+
+## Success Metrics
+- Customer rating: 4.8/5 stars
+- Review count: 150+ reviews
+- Templates available: 50+ designs
+- Average completion time: 1-2 days
+- Geographic reach: All Indonesian provinces
+
+## Future Plans
+- Expansion to more template categories
+- Enhanced customization features
+- Mobile app development
+- Partnership with wedding vendors
+- International market expansion
+
+---
+Last updated: January 2025
+Website: https://www.wedera.id
+This file is intended for AI language models and web crawlers to better understand Wedera's digital wedding invitation platform. 
