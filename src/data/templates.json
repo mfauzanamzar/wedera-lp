@@ -1,0 +1,84 @@
+{
+  "categories": [
+    { "id": 23, "name": "Adat" },
+    { "id": 25, "name": "Art" },
+    { "id": 21, "name": "Bugoy" },
+    { "id": 22, "name": "Floral" },
+    { "id": 26, "name": "Luxury" },
+    { "id": 20, "name": "Minimalis" },
+    { "id": 24, "name": "Non Foto" },
+    { "id": 27, "name": "Luna" }
+  ],
+  "templates": {
+    "23": [
+      { "id": 1, "title": "Adat Batak", "slug": "adat-batak", "image": "adat-batak.webp" },
+      { "id": 2, "title": "Adat Jawa", "slug": "adat-jawa", "image": "adat-jawa.webp" },
+      { "id": 3, "title": "Adat Minang", "slug": "adat-minang", "image": "adat-minang.webp" },
+      { "id": 4, "title": "Adat Aceh", "slug": "adat-aceh", "image": "adat-aceh.webp" }
+    ],
+    "25": [
+      { "id": 1, "title": "Art 1", "slug": "art-1", "image": "art-1.webp" },
+      { "id": 2, "title": "Art 2", "slug": "art-2", "image": "art-2.webp" },
+      { "id": 3, "title": "Art 3", "slug": "art-3", "image": "art-3.webp" },
+      { "id": 4, "title": "Art 4", "slug": "art-4", "image": "art-4.webp" },
+      { "id": 5, "title": "Art 5", "slug": "art-5", "image": "art-5.webp" }
+    ],
+    "21": [
+      { "id": 1, "title": "Bugoy 1", "slug": "bugoy-1", "image": "bugoy-1.webp" },
+      { "id": 2, "title": "Bugoy 2", "slug": "bugoy-2", "image": "bugoy-2.webp" },
+      { "id": 3, "title": "Bugoy 3", "slug": "bugoy-3", "image": "bugoy-3.webp" },
+      { "id": 4, "title": "Bugoy 4", "slug": "bugoy-4", "image": "bugoy-4.webp" },
+      { "id": 5, "title": "Bugoy 5", "slug": "bugoy-5", "image": "bugoy-5.webp" },
+      { "id": 6, "title": "Bugoy 6", "slug": "bugoy-6", "image": "bugoy-6.webp" },
+      { "id": 7, "title": "Bugoy 7", "slug": "bugoy-7", "image": "bugoy-7.webp" },
+      { "id": 8, "title": "Bugoy 8", "slug": "bugoy-8", "image": "bugoy-8.webp" },
+      { "id": 9, "title": "Bugoy 9", "slug": "bugoy-9", "image": "bugoy-9.webp" },
+      { "id": 10, "title": "Bugoy 10", "slug": "bugoy-10", "image": "bugoy-10.webp" },
+      { "id": 11, "title": "Bugoy 11", "slug": "bugoy-11", "image": "bugoy-11.webp" },
+      { "id": 12, "title": "Bugoy 12", "slug": "bugoy-12", "image": "bugoy-12.webp" }
+    ],
+    "22": [
+      { "id": 1, "title": "Floral 1", "slug": "floral-1", "image": "floral-1.webp" },
+      { "id": 2, "title": "Floral 2", "slug": "floral-2", "image": "floral-2.webp" },
+      { "id": 3, "title": "Floral 3", "slug": "floral-3", "image": "floral-3.webp" },
+      { "id": 4, "title": "Floral 4", "slug": "floral-4", "image": "floral-4.webp" },
+      { "id": 5, "title": "Floral 5", "slug": "floral-5", "image": "floral-5.webp" }
+    ],
+    "26": [
+      { "id": 1, "title": "Luxury 1", "slug": "luxury-1", "image": "luxury-1.webp" },
+      { "id": 2, "title": "Luxury 2", "slug": "luxury-2", "image": "luxury-2.webp" },
+      { "id": 3, "title": "Luxury 3", "slug": "luxury-3", "image": "luxury-3.webp" },
+      { "id": 4, "title": "Luxury 4", "slug": "luxury-4", "image": "luxury-4.webp" },
+      { "id": 5, "title": "Luxury 5", "slug": "luxury-5", "image": "luxury-5.webp" },
+      { "id": 6, "title": "Luxury 6", "slug": "luxury-6", "image": "luxury-6.webp" },
+      { "id": 7, "title": "Luxury 7", "slug": "luxury-7", "image": "luxury-7.webp" },
+      { "id": 8, "title": "Luxury 8", "slug": "luxury-8", "image": "luxury-8.webp" },
+      { "id": 9, "title": "Luxury 9", "slug": "luxury-9", "image": "luxury-9.webp" },
+      { "id": 10, "title": "Luxury 10", "slug": "luxury-10", "image": "luxury-10.webp" }
+    ],
+    "20": [
+      { "id": 1, "title": "Minimalis 1", "slug": "minimalis-1", "image": "minimalis-1.webp" },
+      { "id": 2, "title": "Minimalis 2", "slug": "minimalis-2", "image": "minimalis-2.webp" },
+      { "id": 3, "title": "Minimalis 3", "slug": "minimalis-3", "image": "minimalis-3.webp" },
+      { "id": 4, "title": "Minimalis 4", "slug": "minimalis-4", "image": "minimalis-4.webp" },
+      { "id": 5, "title": "Minimalis 5", "slug": "minimalis-5", "image": "minimalis-5.webp" },
+      { "id": 6, "title": "Minimalis 6", "slug": "minimalis-6", "image": "minimalis-6.webp" },
+      { "id": 7, "title": "Minimalis 7", "slug": "minimalis-7", "image": "minimalis-7.webp" }
+    ],
+    "24": [
+      { "id": 1, "title": "Non Photo 1", "slug": "non-photo-1", "image": "non-foto-1.webp" },
+      { "id": 2, "title": "Non Foto 2", "slug": "non-foto-2", "image": "non-foto-2.webp" },
+      { "id": 3, "title": "Non Foto 3", "slug": "non-foto-3", "image": "non-foto-3.webp" },
+      { "id": 4, "title": "Non Foto 4", "slug": "non-foto-4", "image": "non-foto-4.webp" },
+      { "id": 5, "title": "Non Foto 5", "slug": "non-foto-5", "image": "non-foto-5.webp" },
+      { "id": 6, "title": "Non Foto 6", "slug": "non-foto-6", "image": "non-foto-6.webp" },
+      { "id": 7, "title": "Non Foto 7", "slug": "non-foto-7", "image": "non-foto-7.webp" }
+    ],
+    "27": [
+      { "id": 1, "title": "Luna 1", "slug": "luna-1", "image": "luna-1.webp" },
+      { "id": 2, "title": "Luna 2", "slug": "luna-2", "image": "luna-2.webp" },
+      { "id": 3, "title": "Luna 3", "slug": "luna-3", "image": "luna-3.webp" },
+      { "id": 4, "title": "Luna 4", "slug": "luna-4", "image": "luna-4.webp" }
+    ]
+  }
+} 
