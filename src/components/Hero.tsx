@@ -59,7 +59,7 @@ export default function Hero() {
                 href="#catalog"
                 className="inline-block bg-white hover:bg-wedera-pastel text-wedera-primary px-8 py-4 rounded-full text-lg font-medium transition-colors duration-300 shadow-lg hover:shadow-xl text-center border-2 border-wedera-primary"
               >
-                Lihat Catalog
+                Lihat Undangan
               </a>
             </div>
             

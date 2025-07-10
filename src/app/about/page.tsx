@@ -297,10 +297,10 @@ export default function About() {
                 href="/#catalog"
                 className="bg-wedera-primary hover:bg-wedera-primary/90 text-white px-8 py-4 rounded-full font-semibold transition-colors duration-300 inline-flex items-center justify-center"
               >
-                Lihat Template
+                Lihat Undangan
               </Link>
               <Link
-                href="/contact"
+                href="https://wa.me/6282151527990"
                 className="border-2 border-wedera-primary text-wedera-primary hover:bg-wedera-primary hover:text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 inline-flex items-center justify-center"
               >
                 Hubungi Kami

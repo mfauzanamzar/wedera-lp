@@ -19,7 +19,7 @@ const contactInfo = {
       link: "mailto:idwedera@gmail.com"
     }
   ],
-  businessHours: "Senin - Jumat, 09:00 - 17:00 WIB"
+  businessHours: "Setiap hari, 09:00 - 22:00 WIB"
 };
 
 export default function Contact() {
